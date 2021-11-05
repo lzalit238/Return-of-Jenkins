@@ -6,17 +6,30 @@ app.get('/', (req, res) => {
     console.log('user hit the resource')
     res.status(200).sendFile(path.join(__dirname+'/app', '/index.html'))// calling filepath
 })
+
 //  styling
 app.get('/main.css', (req, res) => {
     res.status(200).sendFile(path.join(__dirname+'/app', 'main.css'))
 })
+
+//tribond puzzle
+app.get('/puzzle1', (req, res) =>{
+    res.status(200).send('<h3> answer: a hard bargain, trucker, cattle </h3>')
+})
+
 //  planets puzzle
 app.get('/plutoIsNotAPlanet', (req, res) => {
     res.status(200).send('Puzzle 2')
 })
+
 //  analogy puzzle
 app.get('/WestMec=BestMec', (req, res) => {
     res.status(200).send('About Page')
+})
+
+//
+app.get('/drive', (req, res) => {
+
 })
 
 app.all('*', (req, res) => {
