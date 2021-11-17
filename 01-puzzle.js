@@ -29,7 +29,7 @@ app.get('/WestMec=BestMec', (req, res) => {
 
 //
 app.get('/drive', (req, res) => {
-
+    res.status(200).send('Congrats! U r smart or smth')
 })
 
 app.all('*', (req, res) => {
