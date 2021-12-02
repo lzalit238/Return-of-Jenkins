@@ -7,29 +7,44 @@ app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname+'/app', '/index.html'))// calling filepath
 })
 
-//  styling
+//styling
 app.get('/main.css', (req, res) => {
     res.status(200).sendFile(path.join(__dirname+'/app', 'main.css'))
 })
 
-//tribond puzzle
+// 1. tribond puzzle (drive)
 app.get('/puzzle1', (req, res) =>{
     res.status(200).send('<h3> answer: a hard bargain, trucker, cattle </h3>')
 })
 
-//  planets puzzle
-app.get('/plutoIsNotAPlanet', (req, res) => {
-    res.status(200).send('Puzzle 2')
-})
-
-//  analogy puzzle
-app.get('/WestMec=BestMec', (req, res) => {
-    res.status(200).send('About Page')
-})
-
-//
+//2. tribond puzzle (sketch)
 app.get('/drive', (req, res) => {
-    res.status(200).send('Congrats! U r smart or smth')
+    res.status(200).send('<h3> answer: a comedy troop, a drawing class, a police artist </h3>')
+})
+
+// 3. tribond puzzle (angle)
+app.get('/sketch', (req, res) => {
+    res.status(200).send('<h3> answer: straight, obtuse, acute </h3>');
+})
+
+// 4. dictionary riddle (incorrectly)
+app.get('/angle', (req, res) => {
+    res.status(200).send('<h3> which word in the dictionary is spelled incorrectly? </h3>')
+})
+
+// 5. color riddle (orange)
+app.get('/incorrectly', (req, res) => {
+    res.status(200).send('<h3> what color can you eat </h3>')
+})
+
+// 6. lighting riddle (lightning)
+app.get('/orange', (req, res) => {
+    res.status(200).send('<h3> i touch the earth and i touch the sky, but if i touch you, you\'ll likely die. what am i? </h3>')
+})
+
+// final page 
+app.get('/lightning', (req, res) => {
+    res.status(200).send('<h3> Congrats! U r smart or smth </h3>')
 })
 
 app.all('*', (req, res) => {
@@ -39,6 +54,8 @@ app.all('*', (req, res) => {
 app.listen(5000, () => {
     console.log('server is listening on port 5000...')
 })
+
+//riddles link: www.letsroam.com/explorer/word-riddles/
 
 //app.get
 //app.post

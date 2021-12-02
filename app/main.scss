@@ -72,3 +72,10 @@ p {
   padding: 2rem;
   margin: auto;
 }
+
+#hint {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
